@@ -1,0 +1,13 @@
+clf = make_pipeline(
+    TfidfVectorizer(stop_words=get_stop_words('en')),
+    OneVsRestClassifier(SVC(kernel='linear', probability=True))
+)
+
+
+-datacleaning simple
+-j'identifie la cible , poteltiel X (variable) potentiel y (cible)
+-fit de la pipeline sur tout l'ensemble
+-test de prédiction
+
+-utiliser joblib pour effectuer une sauvegarde de notre modéle à partir de la pipeline
+model_filename = "hatespeech.joblib.z"
